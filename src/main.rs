@@ -36,8 +36,9 @@ fn main() {
         "sub" => subtract(num_1, num_2),
         "mul" => multiply(num_1, num_2),
         "div" => divide(num_1, num_2),
+        "mod" => modulo(num_1, num_2),
         _ => {
-            println!("There are no values to apply methods on");
+            println!("There is no valid operation inputted");
             return;
         },
     };
@@ -47,24 +48,24 @@ fn main() {
 
 }
 fn add(a:f64, b:f64) -> f64 {
-    let res : f64 = a + b;
-    res
+    a + b
 }
 
 fn multiply(a:f64, b:f64) -> f64 {
-    let  res : f64 = a * b;
-    res
+    a * b
 }
 
 fn subtract(a:f64, b:f64) -> f64 {
-    let res : f64 = a - b;
-    res
+    a - b
 }
 
 fn divide(a:f64, b:f64) -> f64 {
-    let res : f64 = a / b;
-    res
+    a / b
     
+}
+
+fn modulo(a:f64, b:f64) -> f64 {
+    a % b
 }
 
 
